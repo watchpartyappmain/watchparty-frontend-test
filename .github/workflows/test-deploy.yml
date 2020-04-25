@@ -1,7 +1,10 @@
 name: Deploy branch to heroku
 
 on:
-  create: [heroku-deploy]
+  release:
+  push:
+    types:
+      - create
 
 jobs:
   build:
