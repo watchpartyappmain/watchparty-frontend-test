@@ -16,6 +16,7 @@ jobs:
     steps:
       - name: Checks out repo
         uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Testing
+        if: github.repository == watchpartyappmain/watchparty-frontend-test
         run: |
-          echo ${{ github.repository }}
+          echo YES SUCCESS;
